@@ -1,0 +1,24 @@
+# Get Chef for RHEL 7
+sudo yum install wget && wget "https://packages.chef.io/stable/el/7/chef-12.11.18-1.el7.x86_64.rpm" && rpm -i chef-12.11.18-1.el7.x86_64.rpm
+
+# Upload recipe to Chef server
+sudo knife cookbook upload install-packages
+
+# Download recipe from Chef server
+sudo knife site download learn_chef_httpd
+
+# BOOTSTRAP NODE
+
+1. On AWS VM
+knife bootstrap ec2-user@ec2-52-37-146-165.us-west-2.compute.amazonaws.com --ssh-user ec2-user --sudo --identity-file '~/Documents/AWS/sohoaws.pem' --node-name node2 --run-list 'recipe[learn_chef_httpd]'
+
+2. On local VirtualBox VM
+knife bootstrap localhost --ssh-port 3023 --ssh-user root --sudo --node-name node-4 --run-list 'recipe[install-packages]'
+
+# UPDATE NODE
+
+1. On AWS VM
+knife ssh 'ec2-52-36-150-152.us-west-2.compute.amazonaws.com' 'sudo chef-client' --manual-list --ssh-user ec2-user --identity-file '~/Documents/AWS/sohoaws.pem'
+
+2. On local VirtualBox VM
+knife ssh -p 3023 'localhost' 'chef-client' --manual-list --ssh-user root

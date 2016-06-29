@@ -1,0 +1,5 @@
+<html>
+  <body>
+    <h1>hello from <%= node['fqdn'] %></h1>
+  </body>
+</html>

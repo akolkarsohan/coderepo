@@ -1,0 +1,40 @@
+{
+  "name": "learn_chef_httpd",
+  "description": "Installs and configures package httpd and sets a basic home page.",
+  "long_description": "Installs and configures package httpd and sets a basic home page. This cookbook is used by the Learn Chef tutorials. https://learn.chef.io",
+  "maintainer": "Learn Chef",
+  "maintainer_email": "learnchef@chef.io",
+  "license": "Apache 2.0",
+  "platforms": {
+    "centos": ">= 0.0.0",
+    "redhat": ">= 0.0.0"
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.2.0"
+}
