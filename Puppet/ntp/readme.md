@@ -1,10 +1,10 @@
 # Configuring NTP on nodes
 
-1. Install ntp module from Puppet Forge
+1.Install ntp module from Puppet Forge
 
-```   puppet module install puppetlabs-ntp```
+```puppet module install puppetlabs-ntp```
 
-2. Classification using site.pp manifest 
+2.Classification using site.pp manifest 
 
 ```emacs /etc/puppetlabs/code/environments/production/manifests/site.pp```
 
@@ -12,18 +12,19 @@
 
    Please see the site.pp manifest file in the directory to check out the implementation.
 
-   NOTE : Classification of node can be alternatively performed using Puppet Console.
+   *NOTE* : Classification of node can be alternatively performed using Puppet Console.
 
-3. Validate site.pp manifest for errors
+3.Validate site.pp manifest for errors
 
 ```puppet parser validate ```
 
-4. Run Puppet agent
+4.Run Puppet agent
 
 ```puppet agent -t```
 
-5. Check if the ntp is installed and configured correctly
+5.Check if the ntp is installed and configured correctly
 
 ```puppet resource package ntp```
+
 ```puppet resource service ntpd```
 
