@@ -20,10 +20,10 @@
 
 4. Run Puppet agent
 
-```puppet agent -t
+```puppet agent -t```
 
 5. Check if the ntp is installed and configured correctly
 
-```puppet resource package ntp
-```puppet resource service ntpd
+```puppet resource package ntp```
+```puppet resource service ntpd```
 
